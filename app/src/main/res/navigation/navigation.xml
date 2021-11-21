@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.pototofoly.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/flutterFragment"
+        android:name="com.example.pototofoly.ui.FlutterFragment"
+        android:label="Flutter"
+        tools:layout="@layout/fragment_flutter" />
+    <fragment
+        android:id="@+id/androidFragment"
+        android:name="com.example.pototofoly.ui.android.AndroidFragment"
+        android:label="Android" />
+
+    <fragment
+        android:id="@+id/experienceFragment"
+        android:name="com.example.pototofoly.ui.experience.ExperienceFragment"
+        android:label="Experience">
+        <action
+            android:id="@+id/action_experienceFragment_to_experienceDetailFragment"
+            app:destination="@id/experienceDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.pototofoly.ui.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/uiUxFragment"
+        android:name="com.example.pototofoly.ui.UiUxFragment"
+        android:label="fragment_ui_ux"
+        tools:layout="@layout/fragment_ui_ux" />
+    <fragment
+        android:id="@+id/experienceDetailFragment"
+        android:name="com.example.pototofoly.ui.experience.ExperienceDetailFragment"
+        android:label="Detail Cerita Saya"
+        tools:layout="@layout/fragment_experience_detail">
+        <argument
+            android:name="experience"
+            app:argType="com.example.pototofoly.data.experience.Experience" />
+    </fragment>
+</navigation>
